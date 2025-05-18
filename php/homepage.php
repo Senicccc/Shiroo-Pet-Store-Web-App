@@ -25,7 +25,7 @@
         <div class="navbar-right" id="navbarMenu">
             <a href="" class="navbar-item">Home</a>
             <a href="" class="navbar-item">Chat</a>
-            <a href="" class="navbar-item">Shop</a>
+            <a href="shop.php" class="navbar-item">Shop</a>
             <a href="" class="navbar-item">User</a>
         </div>
     </nav>
@@ -63,7 +63,7 @@
     <footer class="bottom-navbar">
         <a href="#" class="bottom-nav-item">Home</a>
         <a href="#" class="bottom-nav-item">Chat</a>
-        <a href="#" class="bottom-nav-item">Shop</a>
+        <a href="shop.php" class="bottom-nav-item">Shop</a>
         <a href="#" class="bottom-nav-item">User</a>
     </footer>
 </body>

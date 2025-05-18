@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 09 Bulan Mei 2025 pada 07.52
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: May 18, 2025 at 02:47 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,18 +24,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `booking_detail`
+-- Table structure for table `booking_detail`
 --
 
 CREATE TABLE `booking_detail` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `image` varchar(255) NOT NULL
+  `id` int NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `booking_detail`
+-- Dumping data for table `booking_detail`
 --
 
 INSERT INTO `booking_detail` (`id`, `name`, `description`, `image`) VALUES
@@ -46,56 +46,97 @@ INSERT INTO `booking_detail` (`id`, `name`, `description`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `desc` text NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `stock` int NOT NULL,
+  `category_id` int NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `stock`, `category_id`, `image`) VALUES
+(1, 'Royal Canin - Kitten 1Kg', 'Royal Canin Kitten adalah makanan untuk anak kucing dalam fase pertumbuhan pertama (sampai 4 bulan), Royal Canin mempertahankan bahwa diet kucing harus memperhitungkan semua parameter kehidupan seperti usia, ras, gaya hidup, dan keadaan individual.', '150000.00', 20, 1, 'royal-canin.png'),
+(2, 'Whiskas Tuna Flavour Loaf - adult 1.2Kg', 'Whiskas® Tuna Flavour Loaf adalah makanan kucing basah yang menggugah selera dan seimbang, memenuhi 100% kebutuhan gizi harian kucing dewasa Anda. Tuna untuk kucing ini sangat baik untuk kucing karena:\r\n\r\nTerbuat dari bahan berkualitas tinggi dari tuna asli untuk kucing, Mendukung sistem kekebalan tubuh yang kuat, Mengandung semua vitamin dan mineral yang diperlukan, Membantu menjaga kulit dan bulu, Mengandung jumlah natrium yang optimal untuk kucing', '70000.00', 12, 1, 'WhiskasTunaFlavourLoaf-adult.png'),
+(3, 'Tas hewan Kapasitas Maks 10Kg', '🐾 Tas Ransel Hewan Nyaman | Tas Kucing Astronot Backpack 🐾\r\n \r\nIngin bepergian bersama hewan kesayangan Anda tanpa repot? Tas Ransel Hewan Nyaman adalah pilihan sempurna untuk membawa anabul Anda dengan nyaman dan aman. Dirancang dengan ventilasi maksimal dan desain full-frame transparan, tas ini memastikan hewan kesayangan Anda tetap rileks dan bahagia selama perjalanan.', '125000.00', 18, 2, 'tasranselhewan.png'),
+(4, 'Kalung kucing - Bisa Custom Nama', 'Kalung kucing Berbahan Dasar Kulit Sintetis , kuat dan nyaman ketika di pakai anabul\r\n', '35000.00', 45, 3, 'kalungkucing.png'),
+(5, 'Bak Pasir Kucing - Medium', 'Cat Litter Box Kuning - 49cm x 35cm x 22cm.\r\n\r\nPet Litter Box M19 adalah pet litter dengan ukuran besar, bisa digunakan untuk hewan dewasa ataupun hewan kecil. Dengan desain terbuka dan luas, serta pembatas yang tinggi sehingga membuat anabul akan leluasa bergerak di dalamnya. Pintu litter box dibuat lebih rendah sehingga memudahkan anabul untuk keluar dan masuk, dan juga memudahkan ketika Anda akan membersihkan litter box.', '55000.00', 33, 2, 'bakpasir.png'),
+(6, 'Baju Import Kucing Thailand - Semua Ukuran', 'Import dari Thailand - Kualitas Premium\r\nMaterial: Premium Polyester\r\nWarna : Maroon, Green, Grey, Mocha, Blue, Latte, Khaki\r\nSize: S - XXXL', '95000.00', 29, 3, 'bajuimport.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int NOT NULL,
+  `username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `created_at`) VALUES
-(1, 'test', 'test@gmail.com', '$2y$10$daZB1ZFDg8HNEWVP0yrKteQ/TjRNxqtsee2SUkZsdk6ttnF9bepz.', '2025-05-09 00:12:29');
+(1, 'test', 'test@gmail.com', '$2y$10$daZB1ZFDg8HNEWVP0yrKteQ/TjRNxqtsee2SUkZsdk6ttnF9bepz.', '2025-05-09 00:12:29'),
+(2, 'ichsan', 'test2@gmail.com', '$2y$10$g8epmqFFEpxRGthc2HPifug6D0C9elrj2uPKZf8KQL3nYqwaHjMym', '2025-05-16 03:21:57');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `booking_detail`
+-- Indexes for table `booking_detail`
 --
 ALTER TABLE `booking_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `booking_detail`
+-- AUTO_INCREMENT for table `booking_detail`
 --
 ALTER TABLE `booking_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

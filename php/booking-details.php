@@ -32,7 +32,6 @@ if (!$data) {
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="top-navbar">
         <div class="navbar-left">
@@ -49,7 +48,6 @@ if (!$data) {
 
     <!-- Name Navbar -->
     <div class="mobile-name-navbar">
-        Halo, Ichsan
     </div>
 
     <!-- Booking Details -->

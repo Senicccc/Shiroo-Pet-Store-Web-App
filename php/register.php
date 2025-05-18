@@ -48,7 +48,7 @@
                 $hashed = password_hash($password, PASSWORD_DEFAULT);
                 $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed')";
                 if ($conn->query($sql) === TRUE) {
-                    echo "<script>alert('Registrasi berhasil.'); window.location='index.php';</script>";
+                    echo "<script>alert('Registrasi berhasil.'); location='index.php';</script>";
                 } else {
                     echo "<p class='error'>Gagal mendaftar: " . $conn->error . "</p>";
                 }

@@ -51,7 +51,6 @@ $tanggalHariIni = date("Y-m-d");
 
     <!-- Name Navbar -->
     <div class="mobile-name-navbar">
-        Halo, Ichsan
     </div>
 
     <!-- Booking Form -->
