@@ -83,10 +83,17 @@ if (!isset($snap['token'])) {
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
         <div class="navbar-right" id="navbarMenu">
+<<<<<<< HEAD
             <a href="homepage.php" class="navbar-item">Home</a>
             <a href="#" class="navbar-item">Chat</a>
             <a href="shop.php" class="navbar-item">Shop</a>
             <a href="#" class="navbar-item">User</a>
+=======
+            <a href="../index.php" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">Chat</a>
+            <a href="shop.php" class="navbar-item">Shop</a>
+            <a href="user.php" class="navbar-item">User</a>
+>>>>>>> e2006cd (penambahan fitur CRUD halaman admin)
         </div>
     </nav>
 

@@ -47,7 +47,11 @@ $user = $result->fetch_assoc();
             <a href="" class="navbar-item">Home</a>
             <a href="" class="navbar-item">Chat</a>
             <a href="php/shop.php" class="navbar-item">Shop</a>
+<<<<<<< HEAD
             <a href="" class="navbar-item">User</a>
+=======
+            <a href="php/user.php" class="navbar-item">User</a>
+>>>>>>> e2006cd (penambahan fitur CRUD halaman admin)
         </div>
     </nav>
 

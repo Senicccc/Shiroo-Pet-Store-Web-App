@@ -85,7 +85,11 @@ $nama_user = $user['username'];
         <a href="../index.php" class="bottom-nav-item">Home</a>
         <a href="#" class="bottom-nav-item">Chat</a>
         <a href="shop.php" class="bottom-nav-item">Shop</a>
+<<<<<<< HEAD
         <a href="#" class="bottom-nav-item">User</a>
+=======
+        <a href="user.php" class="bottom-nav-item">User</a>
+>>>>>>> e2006cd (penambahan fitur CRUD halaman admin)
     </footer>
 </body>
 
