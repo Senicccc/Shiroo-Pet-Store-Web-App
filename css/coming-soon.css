@@ -1,0 +1,72 @@
+.under-construction-wrapper {
+  min-height: 100vh;  
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;     
+  padding: 2rem;
+  text-align: center;
+  background-image: url("../img/menu-bg.png");
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Inria Sans", sans-serif;
+}
+
+.uc-icon {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  /* Mencegah user-select (opsional, agar ikon tidak bisa di-highlight) */
+  user-select: none; 
+}
+
+.uc-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.uc-message {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Tombol kembali ke beranda */
+.uc-button {
+  text-decoration: none;
+  background-color: var(--color-button, #9b90bb); /* Menggunakan variabel dari style.css dengan fallback */
+  border-radius: 1rem;
+  color: black;
+  font-family: inherit;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  transition: background-color 0.3s, transform 0.3s ease;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.uc-button:hover {
+  background-color: var(--color-button-hover, #7c74a6); /* Menggunakan variabel dari style.css dengan fallback */
+  transform: scale(1.05);
+}
+
+/* Responsive untuk layar kecil (Mobile) */
+@media (max-width: 768px) {
+  .uc-title {
+    font-size: 2rem;
+  }
+
+  .uc-message {
+    font-size: 1.1rem;
+  }
+
+  .uc-button {
+    /* Agar tombol tidak terlalu lebar di mobile */
+    width: 90%; 
+    max-width: 320px;
+  }
+}

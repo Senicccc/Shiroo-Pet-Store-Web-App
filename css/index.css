@@ -1,0 +1,113 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Inria Sans", sans-serif;
+  height: 100%;
+}
+
+body {
+  background-image: url("../img/menu-bg.png");
+}
+
+.login-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.237);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 350px;
+  margin: 5% auto;
+  text-align: center;
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo-login img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.login-card input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.login-card button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-card button:hover {
+  background-color: #4e47d0;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.15);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: red;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .login-card {
+    width: 74%;
+    padding: 1.5rem;
+    margin: 10% auto;
+  }
+
+  .logo-login img {
+    width: 60%;
+  }
+
+  .login-card input,
+  .login-card button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .register-link,
+  .error {
+    font-size: 0.85rem;
+  }
+}

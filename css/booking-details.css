@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: "Inria Sans", sans-serif;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.booking-desc {
+  width: 100%;
+  background-color: var(--color-button);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.booking-desc p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.booking-button {
+  display: block;
+  width: 100%;
+  background-color: var(--color-header);
+  border: none;
+  border-radius: 10px;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.booking-button:hover {
+  background-color: var(--color-button-hover);
+  transform: scale(1.02);
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  body {
+    padding: 16px 0px;
+  }
+
+  .booking-container {
+    max-width: 90%;
+    padding: 60px 16px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .booking-desc {
+    padding: 16px;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .booking-desc p {
+    font-size: 1rem;
+  }
+
+  .booking-button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}

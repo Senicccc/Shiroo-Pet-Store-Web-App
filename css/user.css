@@ -1,0 +1,212 @@
+.profile-container {
+    max-width: 900px; 
+    margin: 100px auto 30px; 
+    margin-top: 15px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+/* Bagian Informasi User */
+.user-info-section {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.profile-header {
+    margin-bottom: 0px;
+}
+
+.profile-picture {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 1px; 
+    border-color: aliceblue;
+    box-shadow: 0 0 0 7px rgba(255, 217, 230, 0.5); 
+    margin-bottom: 0px;
+}
+
+.profile-header h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.profile-header p {
+    font-size: 1.1em;
+    color: white;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    color: white;
+}
+
+.detail-item {
+    background-color: var(--bg-light);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: var(--shadow-item);
+}
+
+.detail-item strong {
+    color: var(--primary-dark);
+}
+
+/* Riwayat Transaksi */
+.transaction-history-section {
+    margin-top: 20px;
+}
+
+.transaction-history-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1em;
+    color: var(--text-medium);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.tab-button:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.tab-button.active {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-item);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Tabel Riwayat */
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.transaction-table thead {
+    background-color: var(--primary-dark);
+    color: black;
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-light);
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.transaction-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Pesan Kosong Riwayat */
+.tab-content p {
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 80px 15px 20px;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-header h1 {
+        font-size: 2em;
+    }
+
+    .profile-details {
+        font-size: 1em;
+    }
+
+    .detail-item {
+        padding: 8px 15px;
+    }
+
+    .transaction-history-section h2 {
+        font-size: 1.6em;
+    }
+
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
